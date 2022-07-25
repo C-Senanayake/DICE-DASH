@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>DICE Game</title>
+</head>
+<body>
+    <div id="container1">
+        <h1>THE DICE GAME</h1>
+        <form id="myform"  action="" onsubmit="return false" name="myform" >
+            <label for="player1" id="player">Player-1 Name:</label>
+            <input type="text" name="player1" id="player1" placeholder="Enter a name"><br>
+            <label for="player2" id="player">Player-2 Name:</label>
+            <input type="text" name="player2" id="player2" placeholder="Enter a name"><br>
+            <input type="button" onclick="play()" name="submit" id="submit" value="Start">
+        </form>
+    </div><!-- End of container 1 -->
+
+    <div id="container2">
+
+        <h1>THE DICE GAME</h1>
+
+        <div id="p1"><!-- Player1 area -->
+            <img src="img/pp.jpg" alt="Photo" id="pp"><br>
+            <div id="name1"></div><br>
+            <div id="score">
+                <p>Score</p><br>
+                <form name="sf1">
+                    <input type="text" name="score1" id="score1" placeholder="00" >
+                </form>
+            </div>
+            <input type="button" onclick="roll1()" id="roll1" value="Roll">
+        </div>
+        
+        <div id="middle">
+            <div id="dice1"></div><br>
+            <div id="dice2"></div>
+            <div id="total"></div>
+        </div><!-- Middle area -->
+
+        <div id="p2"><!-- Player2 area -->
+            <img src="img/pp.jpg" alt="Photo" id="pp"><br>
+            <div id="name2"></div><br>
+            <div id="score">
+                <p>Score</p><br>
+                <form action="" onsubmit="return false" name="sf2">
+                    <input type="text" name="score2" id="score2" placeholder="00" disabled="true">
+                </form>
+            </div>
+            <input type="button"   onclick="roll2()" id="roll2" value="Roll">
+        </div>
+
+
+     </div><!--End of container 2 -->
+    
+    <div id="container3">
+        <p>WINNER!</p><br>
+        <p id="winner"></p><br>
+        <a href="index.html" id="back">RESET</a>
+
+    </div>
+    
+</body>
+<script src="index.js"></script>
+</html>
